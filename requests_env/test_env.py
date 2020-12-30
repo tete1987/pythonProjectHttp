@@ -14,6 +14,6 @@ class TestEnv:
     }
 
     def test_env(self):
-        r= DemoApi().send(self.data)
-        print(r)
+        r= DemoApi()
+        print(r.send(self.data))
 

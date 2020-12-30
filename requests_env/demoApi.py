@@ -16,12 +16,11 @@
 import requests
 import yaml
 
-
 class DemoApi:
     env = yaml.safe_load(open("env.yaml"))
 
     def send(self,data:dict):
-        #替换
+        #替换地址，self.env["testing"][self.env["default" 的值就是取的默认值
         data["url"]= str(data["url"]).replace("baidu",(self.env["testing"][self.env["default"]]))
 
         r = requests.request(method=data["method"],url=data["url"],headers =data["headers"])
